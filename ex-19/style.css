@@ -1,0 +1,17 @@
+div{
+    width: 500px;
+    height: 300px;
+    background-image: url('./img/834558-3d-cubo-dourado-caixa-abstrato-fundo-gratis-vetor.jpg');
+    background-size: cover;
+    background-position: right center;
+}
+
+p{
+    width: 300px;
+    background-color: rgb(7, 134, 104);
+    
+    font-size: 20px;
+    background-image: url('./img/834558-3d-cubo-dourado-caixa-abstrato-fundo-gratis-vetor.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
