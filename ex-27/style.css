@@ -1,0 +1,17 @@
+input:focus{
+    color: rebeccapurple;
+}
+ul{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    list-style: none;
+}
+
+li:nth-of-type(3n -1){
+    background-color: gold;
+}
+
+//*li:nth-of-type(odd){
+    background-color: gray;
+    color:white;
+}
