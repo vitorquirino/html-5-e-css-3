@@ -1,0 +1,26 @@
+#container{
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    background-color: gray;
+    height: 400px;
+    color: white;
+}    
+
+.cx1{
+    background-color: red;
+}
+
+.cx2{
+    background-color: blue;
+}
+
+.cx3{
+    background-color: green;   
+}
+
+.rect{
+    width: 100px;
+    height: 100px;
+}
