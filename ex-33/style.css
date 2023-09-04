@@ -1,0 +1,30 @@
+:root{
+    --var-cor: blue;
+
+    --var-cordiv1:black;
+    --var-cordiv2:green;
+
+    --square-size:400px
+}
+
+.p2{
+    color: var(--var-cor);
+    font-size: 35px;
+}
+
+.p3{
+    color: var(--var-cor);
+    font-size: 20px;
+}
+
+.square1{
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: var(--var-cordiv1);
+}
+
+.square2{
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color:var(--var-cordiv2) ;
+}
