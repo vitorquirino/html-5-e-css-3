@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+
+
+    background-color: rgb(67, 66, 66);
+    color: white;
+    height: 600px;
+
+}
+
+.c1{
+    background-color: red;
+}
+
+.c2{
+    background-color: blue;
+}
+
+.c3{
+    background-color: green;
+}
+
+.rect{
+    width:250px;
+    height:250px;
+
+}
