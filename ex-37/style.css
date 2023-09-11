@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    flex-flow: column-reverse wrap-reverse;
+    flex-flow: row-reverse wrap-reverse;
 
 
     background-color: rgb(67, 66, 66);
