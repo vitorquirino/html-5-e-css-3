@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Flexbox - Grow/Shrink
+    </title>
+
+    <style>
+        .container{
+            display: flex;
+            
+
+
+
+            height: 650px;
+            background-color: rgb(80, 78, 78);
+            font-size: 2em;
+            color:white;        
+        }
+
+        .c1{
+            flex-grow: 0;
+            background-color: red;
+        }
+
+        .c2{
+            flex-grow: 2;
+            background-color: blue;
+        }
+
+        .c3{
+            flex-grow: 2;
+            background-color: green;
+        }
+
+        .rect{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="c1 rect">1</div>
+        <div class="c2 rect">2</div>
+        <div class="c3 rect">3</div>
+    </div>
+</body>
+</html>
