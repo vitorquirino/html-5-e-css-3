@@ -1,4 +1,5 @@
 #container{
+    height: 700px;
     color: white;
     display: grid;
     padding: 10px;
@@ -7,7 +8,13 @@
     /*grid-template-rows: ;
     grid-template-columns: ; */
 
-    grid-template: 100px 150px 10% / 100px auto;
+    grid-template: auto auto / auto auto auto;
+
+    justify-items: center;
+
+    align-items: center;
+
+    grid-gap: 10px;
 }
 
 .r1{
@@ -23,5 +30,6 @@
 }
 
 .rect{
-
+    width:150px;
+    height: 150px
 }
