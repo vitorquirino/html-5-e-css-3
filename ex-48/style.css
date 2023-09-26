@@ -1,3 +1,52 @@
 /*Fonte: Sora (google fonts)
 Cores das fontes: #FFFFFF e #919193 */
 
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    font-size: 14px;
+}
+
+body{
+    background: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    max-width: 540px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    height: 100%;
+}
+
+.profile-picture{
+    width: 250px;
+    border-radius: 50%;
+}
+
+.gradient{
+    background: linear-gradient(to right,rgb(18, 117, 203), rgb(105, 228, 105));
+}
+
+.username{
+    font-weight:500;
+    font-size: 2empx;
+    margin: 16px 0;
+}
+
+.description{
+    font-size: 1em;
+    color: #919193;
+}
