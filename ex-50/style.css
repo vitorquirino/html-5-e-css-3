@@ -16,4 +16,5 @@
     border-style: solid;
     animation-name: changecolor;
     animation-duration: 6s;
+    animation-delay: -2s;
 }
