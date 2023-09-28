@@ -1,0 +1,16 @@
+.box{
+    width:400px;
+    height:200px;
+    border-style: solid;
+    animation-name: changecolor;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 3;
+}
+
+@keyframes changecolor{
+    0%{background-color:blue; width: 400px;}
+    25%{background-color: blueviolet;}
+    50%{background-color: brown; width: 900px;}
+    100%{background-color: rgb(239, 255, 10); width: 400px;}
+}
