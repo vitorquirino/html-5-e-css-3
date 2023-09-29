@@ -1,0 +1,28 @@
+.box{
+    width: 200px ;
+    height: 200px;
+    border-style: solid ;
+    animation-name: mudcolor;
+    animation-duration: 7s;
+    animation-delay:2s;
+    animation-direction: reverse;
+    animation-fill-mode: both;
+}
+
+@keyframes mudcolor{
+    0%{
+        background-color: blue; width: 300px;
+    }
+
+    25%{
+        background-color: blueviolet;
+    }
+
+    50%{ background-color: red; width: 700px;
+    }
+
+    100%{
+        background-color: rgb(185, 250, 21); width: 300px;
+    } 
+
+}
