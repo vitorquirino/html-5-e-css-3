@@ -3,9 +3,8 @@
     width: 200px ;
     height: 200px;
     border-style: solid ;
-    animation-name: move;
-    animation-duration: 7s;
-    animation-fill-mode: forwards;
+
+    animation: move 3s linear 0s 1 normal forwards;
     
 }
 
