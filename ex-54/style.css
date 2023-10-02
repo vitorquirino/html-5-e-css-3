@@ -1,15 +1,43 @@
 .box{
+    position: relative;
     width: 200px ;
     height: 200px;
     border-style: solid ;
-    animation-name: mudcolor;
+    animation-name: move;
     animation-duration: 7s;
-    animation-delay:2s;
-    animation-direction: reverse;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
+    
 }
 
-@keyframes mudcolor{
+@keyframes move {
+    0% {left: 0px;}
+    100% {left:300px;}
+}
+
+.div1{
+    animation-timing-function: linear;
+}
+
+.div2{
+    animation-timing-function: ease;
+}
+
+.div3{
+    animation-timing-function: ease-in;
+}
+
+.div4{
+    animation-timing-function: ease-out;
+}
+
+.div5{
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+/*@keyframes mudcolor{
     0%{
         background-color: blue; width: 300px;
     }
@@ -25,4 +53,4 @@
         background-color: rgb(185, 250, 21); width: 300px;
     } 
 
-}
+} */
