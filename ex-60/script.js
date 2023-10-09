@@ -2,7 +2,7 @@ let tela = document.getElementById("tela");
 
 let ctx = tela.getContext("2d");
 
-ctx.rect(0,10, 100, 200)
+ctx.rect(0,8, 90, 200)
 
 ctx.fillStyle = "blue"
 //ctx.fillRect(10,10, 100, 200)
@@ -14,4 +14,4 @@ ctx.strokeStyle = "red"
 ctx.fill()
 ctx.stroke()
 
-ctx.clearRect(20,20,30,30)
+ctx.clearRect(10,50,70,10)
