@@ -12,20 +12,23 @@
 </head>
 
 <body>
-    <h4>caminho diário</h4>
-    <img src="img/capa-in-grief.jpg" alt="capa-banda-wannabesedated">
+    <div class="music-container">
+        <h3 id="playlist-title">caminho diário</h3>
+        <img id="img-cover" src="img/capa-in-grief.jpg" alt="capa-banda-wannabesedated">
 
     <div id="below-cover">
         <div id="song-info">
-            <div>nome da musica</div>
-            <div>nome da banda</div>
+            <div id="song-name">United In Grief</div>
+            <div id="band-name" class="light-color">Kendrick Lamar</div>
         </div>
             
-            <div id="like" class="button"><i class="bi bi-heart"></i></div>
+            <div id="like" class="button"><i class="bi bi-heart light-color"></i></div>
     </div>
     
 
-    <div>barra de progresso</div>
+    <div id="progress-bar">
+        <div id="current-progress"></div>
+    </div>
 
 
     <div id="button-container">
@@ -45,6 +48,8 @@
                 <i class="bi bi-repeat"></i>
             </div>
     </div>
+    </div>
+    
     
     <script src="script.js"></script>
 </body>
