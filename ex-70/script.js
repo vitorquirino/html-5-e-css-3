@@ -3,26 +3,39 @@ const bandName = document.getElementById('band-name')
 const musica = document.getElementById('audio');
 const cover = document.getElementById('cover');
 const play = document.getElementById('play')
+const next = document.getElementById('next')
+const previous = document.getElementById('previous')
+
+
+
+
+
+const Mockingbird ={
+    songName : 'Mockingbird',
+    artist : 'eminem',
+    file : 'Mockingbird'
+};
+
 
 const UnitedInGrief ={
     songName : 'United-In-Grief',
     artist : 'kendrick-Lamar',
-    file : 'capa-in-grief.jpg'
+    file : 'United-in-Grief'
 };
 
 const wannabesedated ={
     songName : 'wanna-be-sedated',
     artist : 'ramones',
-    file : 'capa-wanna-be-sedated.jpg'
+    file : 'wanna-be-sedated'
 };
 
-const Mockingbird ={
-    songName : 'Mockingbird',
-    artist : 'eminem',
-    file : 'capa-Mockingbird.jpg'
-};
+
+
+
 
 let isPlaying = false;
+const playList = [UnitedInGrief, wannabesedated,Mockingbird];
+let index = 0;
 
 function playSong(){
     play.querySelector('.bi').classList.remove('bi-play-circle-fill');
@@ -49,6 +62,44 @@ function playPauseDecider(){
     }
 }
 
+function initializeSong(){
+    cover.src = `img/${playList[index].file}.jpg`;
+    musica.src = `songs/${playList[index].file}.mp3`;
+    songName.innerText = playList[index].songName;
+    bandName.innerText = playList[index].artist;
+}
+
+function previousSong(){
+    if(index === 0){
+        index = playList.length - 1
+    }
+    else{
+        index -= 1;
+    }
+    initializeSong();  
+    playSong();
+}
+
+
+function nextSong(){
+    if(index === playList.length - 1){
+        index = 0;
+    }
+    else{
+        index += 1;
+    }
+    initializeSong();  
+    playSong();
+}
+
+
+
+initializeSong();
+
+
+
 
 play.addEventListener('click',playPauseDecider);
+previous.addEventListener('click',previousSong)
+next.addEventListener('click',nextSong)
 
