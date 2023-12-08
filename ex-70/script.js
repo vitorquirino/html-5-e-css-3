@@ -2,9 +2,10 @@ const songName = document.getElementById('song-name');
 const bandName = document.getElementById('band-name')
 const musica = document.getElementById('audio');
 const cover = document.getElementById('cover');
-const play = document.getElementById('play')
-const next = document.getElementById('next')
-const previous = document.getElementById('previous')
+const play = document.getElementById('play');
+const next = document.getElementById('next');
+const previous = document.getElementById('previous');
+const currentProgress = document.getElementById('current-progress');
 
 
 
@@ -92,6 +93,11 @@ function nextSong(){
     playSong();
 }
 
+function updateProgressBar(){
+    const barWidth = (musica.currentTime/musica.duration)*100;
+    currentProgress.style.setProperty('--progress', `${barWidth}%`);
+}
+
 
 
 initializeSong();
@@ -100,6 +106,7 @@ initializeSong();
 
 
 play.addEventListener('click',playPauseDecider);
-previous.addEventListener('click',previousSong)
-next.addEventListener('click',nextSong)
+previous.addEventListener('click',previousSong);
+next.addEventListener('click',nextSong);
+songName.addEventListener('timeupdate',updateProgressBar)
 

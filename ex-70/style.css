@@ -59,9 +59,9 @@ button{
     font-size: 4em;
 }
 
-#img-cover{
+#cover{
     width:450px ;
-    border: solid 5px rgba(255, 255, 255, 0.891);
+    border: solid 5px rgba(243, 243, 243, 0.597);
 }
 
 
@@ -73,7 +73,7 @@ button{
 }
 
 #progress-bar{
-    background-color: rgb(139, 153, 156);
+    background-color: rgb(77, 78, 79);
     border-radius: 15px;
     height: 3px;
     width: 100%;
@@ -81,8 +81,9 @@ button{
 }
 
 #current-progress{
-    background-color: white;
+    --progress: 0%;
+    background-color: rgb(255, 255, 255);
     height: inherit;
-    width: 50%;
+    width: var(--progress);
     border-radius: inherit;
 }
