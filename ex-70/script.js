@@ -95,8 +95,10 @@ function nextSong(){
 
 function updateProgressBar(){
     const barWidth = (musica.currentTime/musica.duration)*100;
-    currentProgress.style.setProperty('--progress', `${barWidth}%`);
+    currentProgress.style.setProperty('--progress', `${barWidth}%`); 
 }
+updateProgressBar()
+
 
 
 
