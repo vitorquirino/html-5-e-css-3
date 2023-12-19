@@ -5,7 +5,7 @@ const cover = document.getElementById('cover');
 const play = document.getElementById('play');
 const next = document.getElementById('next');
 const previous = document.getElementById('previous');
-const currentProgress = document.getElementById('current-progress');
+const CurrentProgress = document.getElementById('current-progress');
 
 
 
@@ -95,20 +95,15 @@ function nextSong(){
 
 function updateProgressBar(){
     const barWidth = (musica.currentTime/musica.duration)*100;
-    currentProgress.style.setProperty('--progress', `${barWidth}%`); 
+    CurrentProgress.style.setProperty('--progress',`${barWidth}%`) 
 }
-
-
-
 
 
 initializeSong();
 
 
-
-
 play.addEventListener('click',playPauseDecider);
 previous.addEventListener('click',previousSong);
 next.addEventListener('click',nextSong);
-songName.addEventListener('timeupdate',updateProgressBar)
+musica.addEventListener('timeupdate',updateProgressBar)
 
