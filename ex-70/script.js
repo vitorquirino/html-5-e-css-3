@@ -6,6 +6,7 @@ const play = document.getElementById('play');
 const next = document.getElementById('next');
 const previous = document.getElementById('previous');
 const CurrentProgress = document.getElementById('current-progress');
+const progresscontainer = document.getElementById('progress-container');
 
 
 
@@ -98,6 +99,13 @@ function updateProgressBar(){
     CurrentProgress.style.setProperty('--progress',`${barWidth}%`) 
 }
 
+function jumpTo(event){
+    const width = progresscontainer.clientWidth;
+    const clickPosition = event.offsetX;
+    const jumpToTime = (clickPosition/width) * musica.duration;
+    musica.currentTime = jumpToTime;
+}
+
 
 initializeSong();
 
@@ -106,4 +114,4 @@ play.addEventListener('click',playPauseDecider);
 previous.addEventListener('click',previousSong);
 next.addEventListener('click',nextSong);
 musica.addEventListener('timeupdate',updateProgressBar)
-
+progresscontainer.addEventListener('click', jumpTo)
