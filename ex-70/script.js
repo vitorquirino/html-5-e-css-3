@@ -7,6 +7,7 @@ const next = document.getElementById('next');
 const previous = document.getElementById('previous');
 const CurrentProgress = document.getElementById('current-progress');
 const progresscontainer = document.getElementById('progress-container');
+const shuffleButton = document.getElementById('shuffle');
 
 
 
@@ -34,9 +35,10 @@ const wannabesedated ={
 
 
 
-
 let isPlaying = false;
-const playList = [UnitedInGrief, wannabesedated,Mockingbird];
+let isShuffled = false;
+const originalplayList = [UnitedInGrief, wannabesedated,Mockingbird];
+let sortedplayList = [...originalplayList];
 let index = 0;
 
 function playSong(){
@@ -65,15 +67,15 @@ function playPauseDecider(){
 }
 
 function initializeSong(){
-    cover.src = `img/${playList[index].file}.jpg`;
-    musica.src = `songs/${playList[index].file}.mp3`;
-    songName.innerText = playList[index].songName;
-    bandName.innerText = playList[index].artist;
+    cover.src = `img/${sortedplayList[index].file}.jpg`;
+    musica.src = `songs/${sortedplayListplayList[index].file}.mp3`;
+    songName.innerText = sortedplayListplayList[index].songName;
+    bandName.innerText = sortedplayListplayList[index].artist;
 }
 
 function previousSong(){
     if(index === 0){
-        index = playList.length - 1
+        index = sortedplayList.length - 1
     }
     else{
         index -= 1;
@@ -84,7 +86,7 @@ function previousSong(){
 
 
 function nextSong(){
-    if(index === playList.length - 1){
+    if(index === sortedplayListplayList.length - 1){
         index = 0;
     }
     else{
@@ -106,6 +108,13 @@ function jumpTo(event){
     musica.currentTime = jumpToTime;
 }
 
+function shuffleButtonClicked(){
+    if(isShuffled === false){
+        isShuffled = true;
+        shuffleArray();
+    }
+}
+
 
 initializeSong();
 
@@ -115,3 +124,4 @@ previous.addEventListener('click',previousSong);
 next.addEventListener('click',nextSong);
 musica.addEventListener('timeupdate',updateProgressBar)
 progresscontainer.addEventListener('click', jumpTo)
+shuffleButton.addEventListener('click',shuffleButtonClicked)
