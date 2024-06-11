@@ -1,0 +1,11 @@
+:root{
+    --var_red: rgb(13, 242, 29);
+    --
+}
+
+.p2{
+    color: var(--var_red);
+}
+.p4{
+    color: var(--var_red);
+}
