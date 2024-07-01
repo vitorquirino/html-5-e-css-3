@@ -1,11 +1,23 @@
-:root{
-    --var_red: rgb(13, 242, 29);
-    --
+.container{
+    height: 400px;
+    width: 80%;
+    background-color: gray;
+    color: white;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: green;
 }
 
-.p2{
-    color: var(--var_red);
-}
-.p4{
-    color: var(--var_red);
+.rect{
+    width: 100px;
+    height: 100px;
 }
